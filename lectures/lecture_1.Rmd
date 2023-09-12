@@ -1,0 +1,271 @@
+---
+title: "AC584/AC579 - Data Analytics for Accounting and Business"
+subtitle: "Lecture 1: Introduction"
+author: "Damien Dupré - Dublin City University"
+output:
+  xaringan::moon_reader:
+    css: ["default", "metropolis", "metropolis-fonts", "css/custom_design.css"]
+    lib_dir: libs
+    nature:
+      beforeInit: "libs/cols_macro.js"
+      highlightStyle: zenburn
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include = FALSE}
+# libraries --------------------------------------------------------------------
+library(tidyverse)
+library(knitr)
+library(anicon)
+library(nomnoml)
+library(DiagrammeR)
+# general options --------------------------------------------------------------
+options(scipen = 999)
+set.seed(42)
+# chunk options ----------------------------------------------------------------
+opts_chunk$set(
+  cache.extra = rand_seed, 
+  message = FALSE, 
+  warning = FALSE, 
+  error = FALSE, 
+  echo = FALSE,
+  cache = FALSE,
+  comment = "", 
+  fig.align = "center", 
+  fig.retina = 3
+  )
+```
+
+# Module Contact Details
+.pull-left[
+## Damien Dupré, PhD
+
+- email: damien.dupre@dcu.ie
+- phone: 00353 (0)1 700 6360
+- office: Q233 DCU Business School
+
+]
+
+.pull-right[
+```{r out.width='60%'}
+include_graphics("https://pbs.twimg.com/profile_images/1221820283159490565/96a3XnSg_400x400.jpg")
+```
+]
+
+---
+
+# About Me
+
+#### Developement of the DynEmo Facial Expression Database (Master)
+
+* Dynamic and spontaneous emotions
+* Assessed with self-reports and by observers
+
+#### Analysis of Emotional User Experience of Innovative Tech. (Industrial PhD)
+
+* Understand users' acceptance of technologies from their emotional response
+* Based on multivariate self-reports
+
+#### Evaluation of Emotions from Facial and Physiological Measures (Industrial PostDoc)
+
+* Applications to marketing, sports and automotive industries
+* Dynamic changes with trend extraction techniques (2 patents)
+
+#### Performance Prediction using Machine Learning (Academic PostDoc)
+
+* Application to sport analytics
+* Big Data treatment (> 1 million users with activities recorded in the past 5 years)
+
+---
+
+# Module Content
+
+## Knowledge
+
+- Data Organisation
+- Data Cleaning
+- Professional Visualisation Outputs
+- First Steps in Programming Languages
+
+## Skills
+
+- EXCEL
+- PowerBI
+- TABLEAU
+- R & RStudio
+
+The lecture will alternate between **theory sessions** and **practice sessions**.
+
+---
+
+# Module Organisation
+
+### Lecture Every 2-Week
+- Monday between 4pm and 6pm
+- Recordings on-demand and not shareable
+- Attendance recorded with QR codes at the beginning of the lectures
+
+### Assignments
+- 10% Kubicle Online Courses
+- 40% Tableau Dashboard
+- 50% Quarto Report
+
+---
+class: inverse, mline, center, middle
+
+# Data Analytics and Big Data
+
+---
+
+# What are Big Data?
+
+### Definition
+
+The term Big Data corresponds to a table containing observations (i.e. database or dataset) that is **too long, too large or too complex to be handled by conventional tools**
+
+### Microsoft Excel's Limits (v16.44 - Office 365):
+
+- Total number of rows: **1,048,576 rows**
+- Total number columns: **16,384 columns**
+
+.pull-left[
+```{r out.width='60%'}
+include_graphics("https://qph.fs.quoracdn.net/main-qimg-e4072574da0c7a785bc4b138b694189f")
+```
+]
+.pull-right[
+*Have you ever tried to scroll down to the end of Excel? Because I did!*
+]
+
+---
+
+# Data vs. Information
+
+Without data, an organization could not successfully complete most business activities. However, organisations need to convert these data into meaningful information
+
+- Data consists of raw facts
+- Information is often confused with the term data
+
+### Example: Sales Manager
+- Knowing number of sales for each representative (fact – data)
+- Knowing total monthly sales (transformed – information)
+
+```{nomnoml, fig.width=10, fig.height=3}
+#stroke: black
+#direction: right
+#align: center
+[Data]->[Transformation Process]
+[Transformation Process]->[Information]
+```
+
+---
+
+# Value of Information
+
+- **Goals**: Helps decision makers achieve organisational goals
+- **Performance**: Valuable information helps people and organisations perform
+- **Accuracy**: Inaccurate/Incomplete information leads to Poor Decisions and can result in High Cost for the organisation 
+
+--
+
+### Data Analytics
+
+- The science of using data to build models that lead to better decisions that in turn add value to individuals, companies and institutions
+- The analysis of data, typically large sets of data, by the use of mathematics, statistics, and computer software
+
+```{r}
+#| fig.cap: "Data analytics provides an integrated view of business performance."
+DiagrammeR::grViz("
+  digraph {
+    'Business performance results' -> 'What happened?' [dir = both]
+    'Business performance results' -> 'Why did it happen?' [dir = both]
+    'Business performance results' -> 'What do we want to happen?' [dir = both]
+  }", width = 800, height = 150)
+```
+
+---
+
+# Styles of Data Analytics
+
+It uses a combination of historical information about past transactions or events and reference data about, for example, customers or products, to enable a wide variety of analyses and decision support techniques.
+
+- **Standard Reports:** Preformatted information for predefined backward-looking analysis. 
+
+- **Academic Reports:** Application of research methods to business information  using descriptive and inferential statistics.
+
+- **Dashboards:** Business performance metrics using specific variables presented in a tabular or graphical format.
+
+- **Alerts:** Communication to designated business people when a key business variable is outside a predefined performance standard or range.
+
+- **Predictive Analytics:** Application of historical business information to predict future the performance and potentially prescribe a favoured course of action.
+
+---
+class: inverse, mline, center, middle
+ 
+# Data Analytics and Storytelling
+ 
+---
+ 
+# Role of Data Storytelling
+ 
+> **Stories** are how we translate core, essential **content**<br>to different **forms**<br>for specific **audiences**.
+ 
+--
+ 
+### Purpose of stories:
+ 
+Visual communication plays an important role in a visual analytics process. No matter how advanced and sophisticated data visualisation techniques are used, if we failed to tell a compelling story by using the data visualisation designed, all the hard work and efforts will be wasted.
+ 
+--
+ 
+### Motivation:
+ 
+.pull-left[
+**Exploratory analysis**: 
+- exploring and understanding the data, conducting the analysis
+]
+ 
+.pull-right[
+**Explanatory analysis**: 
+- explaining your findings from your analysis in a coherent narrative that leads to a call to action
+]
+ 
+---
+ 
+# Build your Story
+ 
+> When adding texts or visualisations, ask yourself: "Does this element support the point I want to make about the data?"
+ 
+--
+ 
+### Guiding Your Viewer 
+ 
+Another way we can guide people through our visualization is by using **annotations**, which can be very helpful in guiding someone through our figure. However, think about only labelling the data that matters.
+ 
+--
+ 
+### Use your titles/captions!
+ 
+- Titles can guide people to the point of your figure
+- Primes people to know what to look for
+- "If there is a conclusion you want your audience to reach, state it in words"
+ 
+--
+
+### References
+ 
+- [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
+- [Hands-On Data Visualization: Interactive Storytelling from Spreadsheets to Code](https://handsondataviz.org/)
+
+---
+class: inverse, mline, left, middle
+
+<img class="circle" src="https://github.com/damien-dupre.png" width="250px"/>
+
+# Thanks for your attention and don't hesitate to ask if you have any question!
+
+[`r fontawesome::fa(name = "twitter")` @damien_dupre](http://twitter.com/damien_dupre)  
+[`r fontawesome::fa(name = "github")` @damien-dupre](http://github.com/damien-dupre)  
+[`r fontawesome::fa(name = "link")` damien-datasci-blog.netlify.app](https://damien-datasci-blog.netlify.app)  
+[`r fontawesome::fa(name = "paper-plane")` damien.dupre@dcu.ie](mailto:damien.dupre@dcu.ie)
