@@ -101,15 +101,31 @@ The lecture will alternate between **theory sessions** and **practice sessions**
 
 # Module Organisation
 
+### Module Codes
+- AC579 for MSc International Accounting & Business
+- AC584 for MSc in Accounting 
+
+`r faa("exclamation-triangle", animate="flash", speed="slow", color="red")` The loop page is AC584 for everyone (lectures + assignment submission).
+
 ### Lecture Every 2-Week
 - Monday between 4pm and 6pm
 - Recordings on-demand and not shareable
-- Attendance recorded with QR codes at the beginning of the lectures
+- [Attendance recorded with QR codes at the beginning of the lectures](https://loop.dcu.ie/mod/attendance/password.php?session=74763)
 
-### Assignments
-- 10% Kubicle Online Courses
-- 40% Tableau Dashboard
-- 50% Quarto Report
+---
+
+# Assignments
+- 10% Kubicle Online Courses (all courses done by 15/04/24)
+
+  - Data Presentation Skills - Data Presentation Fundamentals
+  - Excel - Excel Essentials
+  - Excel - Data Analysis
+  - Visualization Fundamentals - Understanding Data Visualization
+  - Tableau - Tableau Essentials
+  - Tableau - Advancing in Tableau
+
+- 40% Tableau Public Dashboard (deadline 15/02/24)
+- 50% Quarto Report (deadline 15/03/24)
 
 ---
 class: inverse, mline, center, middle
@@ -124,7 +140,7 @@ class: inverse, mline, center, middle
 
 The term Big Data corresponds to a table containing observations (i.e. database or dataset) that is **too long, too large or too complex to be handled by conventional tools**
 
-### Microsoft Excel's Limits (v16.44 - Office 365):
+### Microsoft Excel's Limits (v16.77 - Office 365):
 
 - Total number of rows: **1,048,576 rows**
 - Total number columns: **16,384 columns**
