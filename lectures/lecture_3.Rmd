@@ -472,14 +472,14 @@ class: title-slide, middle
 ##.center[Histogram - Density - BoxPlot - Dynamite]
 
 ```{r fig.width=2.7, fig.align='default'}
-ggplot(organisation_alpha, aes(salary_2019)) +
+ggplot(organisation_alpha, aes(salary_2022)) +
   geom_histogram(bins = 10) +
   labs(x = "Salary", y = "Count") +
   coord_flip() + 
   theme_bw() +
   theme(text = element_text(size = 20))  
 
-ggplot(organisation_alpha, aes(salary_2019)) +
+ggplot(organisation_alpha, aes(salary_2022)) +
   geom_density() +
   labs(x = "Salary", y = "Proportion") +
   coord_flip() + 
@@ -489,7 +489,7 @@ ggplot(organisation_alpha, aes(salary_2019)) +
     text = element_text(size = 20)
   )  
 
-ggplot(organisation_alpha, aes(salary_2019)) +
+ggplot(organisation_alpha, aes(salary_2022)) +
   geom_boxplot() +
   labs(x = "Salary", y = NULL) +
   coord_flip() + 
@@ -501,7 +501,7 @@ ggplot(organisation_alpha, aes(salary_2019)) +
     text = element_text(size = 20)
   )
 
-ggplot(organisation_alpha, aes(x = "", y = salary_2019)) +
+ggplot(organisation_alpha, aes(x = "", y = salary_2022)) +
   stat_summary(fun.data = mean_cl_boot, geom = "errorbar") + 
   stat_summary(fun = "mean", geom = "bar") +
   scale_y_continuous(limits = c(0, 50000)) +
@@ -554,7 +554,7 @@ ggplot(organisation_alpha, aes(location, fill = gender)) +
 Count of different values according Categories
 
 ```{r out.width='50%', fig.align='default'}
-ggplot(organisation_alpha, aes(salary_2019, fill = gender)) +
+ggplot(organisation_alpha, aes(salary_2022, fill = gender)) +
   geom_histogram(bins = 10) +
   labs(
     title = "Stacked Position Histogram",
@@ -565,7 +565,7 @@ ggplot(organisation_alpha, aes(salary_2019, fill = gender)) +
   theme_bw() +
   theme(text = element_text(size = 20))  
 
-ggplot(organisation_alpha, aes(salary_2019, fill = gender)) +
+ggplot(organisation_alpha, aes(salary_2022, fill = gender)) +
   geom_histogram(bins = 10) +
   facet_wrap(gender ~ .) +
   labs(
@@ -585,7 +585,7 @@ ggplot(organisation_alpha, aes(salary_2019, fill = gender)) +
 Density of different values according Categories
 
 ```{r out.width='50%', fig.align='default'}
-ggplot(organisation_alpha, aes(salary_2019, fill = gender, color = gender)) +
+ggplot(organisation_alpha, aes(salary_2022, fill = gender, color = gender)) +
   geom_density() +
   labs(
     title = "Stacked Position Density Plot",
@@ -596,7 +596,7 @@ ggplot(organisation_alpha, aes(salary_2019, fill = gender, color = gender)) +
   theme_bw() +
   theme(text = element_text(size = 20))  
 
-ggplot(organisation_alpha, aes(salary_2019, fill = gender, color = gender)) +
+ggplot(organisation_alpha, aes(salary_2022, fill = gender, color = gender)) +
   geom_density() +
   facet_wrap(gender ~ .) +
   labs(
@@ -616,7 +616,7 @@ ggplot(organisation_alpha, aes(salary_2019, fill = gender, color = gender)) +
 Median/Quartiles according Categories
 
 ```{r out.width='50%', fig.align='default'}
-ggplot(organisation_alpha, aes(salary_2019, color = gender)) +
+ggplot(organisation_alpha, aes(salary_2022, color = gender)) +
   geom_boxplot() +
   labs(x = "Salary", y = NULL) +
   coord_flip() +
@@ -628,7 +628,7 @@ ggplot(organisation_alpha, aes(salary_2019, color = gender)) +
     text = element_text(size = 20)
   )
 
-ggplot(organisation_alpha, aes(salary_2019, "", color = gender)) +
+ggplot(organisation_alpha, aes(salary_2022, "", color = gender)) +
   geom_violin() +
   theme_bw() +
   labs(x = "Salary", y = NULL) +
@@ -648,7 +648,7 @@ ggplot(organisation_alpha, aes(salary_2019, "", color = gender)) +
 Mean/Standard Deviation according Categories
 
 ```{r out.width='50%'}
-ggplot(organisation_alpha, aes(x = gender, y = salary_2019, fill = gender)) +
+ggplot(organisation_alpha, aes(x = gender, y = salary_2022, fill = gender)) +
   stat_summary(fun.data = mean_cl_boot, geom = "errorbar") + 
   stat_summary(fun = "mean", geom = "bar") +
   labs(x = NULL, y = "Salary") + 
@@ -666,13 +666,13 @@ class: title-slide, middle
 # RELATIONSHIP - Continuous/Continuous
 
 ```{r fig.height=3, fig.width=5, fig.align='default'}
-ggplot(organisation_alpha, aes(age, salary_2019)) +
+ggplot(organisation_alpha, aes(age, salary_2022)) +
   geom_point() +
   labs(x = "Age", y = "Salary") +
   theme_bw() +
   theme(text = element_text(size = 20)) 
 
-ggplot(organisation_alpha, aes(age, salary_2019)) +
+ggplot(organisation_alpha, aes(age, salary_2022)) +
   geom_smooth(method = "lm") +
   geom_point() +
   labs(x = "Age", y = "Salary") +
@@ -683,14 +683,14 @@ ggplot(organisation_alpha, aes(age, salary_2019)) +
 Continuous X Continuous X Categorical
 
 ```{r fig.height=3, fig.width=5, fig.align='default'}
-ggplot(organisation_alpha, aes(age, salary_2019, color = gender)) +
+ggplot(organisation_alpha, aes(age, salary_2022, color = gender)) +
   geom_smooth(method = "lm") +
   geom_point() +
   labs(x = "Age", y = "Salary") +
   theme_bw() +
   theme(text = element_text(size = 20)) 
 
-ggplot(organisation_alpha, aes(age, salary_2019, color = gender)) +
+ggplot(organisation_alpha, aes(age, salary_2022, color = gender)) +
   geom_smooth(method = "lm") +
   geom_point() +
   facet_wrap(~ gender) +
@@ -1197,11 +1197,18 @@ data.frame(
 
 ---
 
+# Kubicle Mandatory Trainings
+
+- Data Presentation Skills - Data Presentation Fundamentals: https://app.kubicle.com/library/data-presentation-skills
+
+- Visualization Fundamentals - Understanding Data Visualization: https://app.kubicle.com/library/visualization-fundamentals
+
+---
+
 # Optional Free Trainings
 
 Visualisations with Power BI:
 - [Explore Power BI World!](https://www.udemy.com/course/explore-power-bi/)
-- [Learn Power BI Basics for Free](https://www.udemy.com/course/learn_power_bi_for_free/)
 - [Power BI - The Ultimate Orientation](https://www.udemy.com/course/power-bi-the-ultimate-orientation/)
 - [Power BI Tutorial From Beginner to Pro ⚡ Desktop to Dashboard in 60 Minutes ⏰](https://www.youtube.com/watch?v=AGrl-H87pRU)
 - [How to use Microsoft Power BI - Tutorial for Beginners](https://www.youtube.com/watch?v=TmhQCQr_DCA)
