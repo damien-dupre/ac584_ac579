@@ -751,6 +751,34 @@ countdown(minutes = 20, warn_when = 60)
 ```
 
 ---
+
+# Kubicle Mandatory Trainings
+
+Tableau Essentials
+- [Introducing Tableau](https://app.kubicle.com/courses/tableau-2020-2-introducing-tableau) (120 min)
+- [Creating Visualizations in Tableau](https://app.kubicle.com/courses/tableau-2020-2-creating-visualizations-in-tableau) (150 min)
+- [Dashboard Design](https://app.kubicle.com/courses/dashboard-design) (150 min)
+
+Advancing in Tableau
+- [Optimizing for Performance](https://app.kubicle.com/courses/tableau-2020-2-optimizing-for-performance) (90 min)
+- [Advanced Visualizations in Tableau](https://app.kubicle.com/courses/tableau-2020-2-advanced-visualizations-in-tableau) (90 min)
+]
+
+---
+
+# Optional Free Trainings
+
+Visualisations with Tableau:
+- [Tableau desktop: 10 core skills for business users](https://www.udemy.com/course/tableau-desktop-10-core-skills-for-business-users/)
+- [Tableau: Get Started](https://help.tableau.com/current/pro/desktop/en-us/getstarted_buildmanual_ex1basic.htm)
+- [Introduction to Dimensions and Measures](https://www.tableau.com/drive/dimensions-and-measures-intro)
+- [Datafields, Types, and Roles](https://help.tableau.com/current/pro/desktop/en-us/datafields_typesandroles_datatypes.htm)
+- [Filters on Dimensions](https://www.tutorialgateway.org/tableau-filters-on-dimensions/)
+- [Tableau in Two Minutes - Tableau Basics for Beginners](https://www.youtube.com/watch?v=jEgVto5QME8)
+- [Tableau for Data Science and Data Visualization - Crash Course Tutorial](https://www.youtube.com/watch?v=TPMlZxRRaBQ)
+
+
+---
 class: inverse, mline, left, middle
 
 <img class="circle" src="https://github.com/damien-dupre.png" width="250px"/>

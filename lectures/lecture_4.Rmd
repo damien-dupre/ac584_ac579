@@ -528,6 +528,16 @@ countdown(minutes = 20, warn_when = 60)
 ```
 
 ---
+
+# Optional Free Trainings
+
+Visualisations with Power BI:
+- [Explore Power BI World!](https://www.udemy.com/course/explore-power-bi/)
+- [Power BI - The Ultimate Orientation](https://www.udemy.com/course/power-bi-the-ultimate-orientation/)
+- [Power BI Tutorial From Beginner to Pro ⚡ Desktop to Dashboard in 60 Minutes ⏰](https://www.youtube.com/watch?v=AGrl-H87pRU)
+- [How to use Microsoft Power BI - Tutorial for Beginners](https://www.youtube.com/watch?v=TmhQCQr_DCA)
+
+---
 class: inverse, mline, left, middle
 
 <img class="circle" src="https://github.com/damien-dupre.png" width="250px"/>

@@ -421,16 +421,21 @@ Recording a Macro:
 
 ## Mandatory Online Trainings on Kubicle
 
-- Excel - Excel Essentials
-- Excel - Data Analysis
+Excel Essentials
+- [Data Manipulation and Formatting](https://app.kubicle.com/courses/data-manipulation-and-formatting) (150 min)
+- [Formulas and Functions](https://app.kubicle.com/courses/formulas-and-functions) (210 min)
+
+Data Analysis
+- [Lookups and Database Functions](https://app.kubicle.com/courses/lookups-and-database-functions) (150 min)
+- [Pivot Tables](https://app.kubicle.com/courses/pivot-tables) (150 min)
 
 ## Optional Free Online Trainings
 
 More about MS EXCEL with free online learning on Udemy.com (needs free registration):
 
-- Excel Quick Start Tutorial (36 min) https://www.udemy.com/course/excel_quickstart/
-- Ten Excel Features Every Analyst Should Know (30 min) https://www.udemy.com/course/ten-excel-features-every-analyst-should-know/
-- Excel Dashboards (60 min) https://www.udemy.com/course/excel-dashboards-in-an-hour/
+- [Excel Quick Start Tutorial (36 min)](https://www.udemy.com/course/excel_quickstart/) 
+- [Ten Excel Features Every Analyst Should Know (30 min)](https://www.udemy.com/course/ten-excel-features-every-analyst-should-know/) 
+- [Excel Dashboards (60 min)](https://www.udemy.com/course/excel-dashboards-in-an-hour/) 
 
 ---
 class: inverse, mline, left, middle
