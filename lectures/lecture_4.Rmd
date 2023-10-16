@@ -478,14 +478,6 @@ class: inverse, mline, center, middle
 
 ---
 
----
-
-class: inverse, mline, center, middle
-
-# 0. Practice Data and Topic
-
----
-
 # Practice Data
 
 In order to show you how to use Power BI, we are going to exercise with the dataset called **titanic**.
@@ -531,13 +523,14 @@ include_graphics("https://rss.onlinelibrary.wiley.com/cms/asset/70b0be43-c955-49
 ```
 
 ---
-class: title-slide, middle
 
-## Use **titanic.csv** to create a report in Power BI
+# Exercise: Titanic Dashboard
 
-Use **1 Composition Figure**, **1 Comparison Figure** and **1 Relationship Figure**
+## 1. Use **titanic.csv** to explore the following question: “women and children first” or “every man for himself”?
 
-Remember to **use titles**, to **customise them** and to **add a text** to convey your narrative
+## 2. Create a report that contains **1 Composition Figure**, **1 Comparison Figure** and **1 Relationship Figure** and **pin them on a Power BI dashboard**.
+
+## 3. Pin these 3 visualisation on a Power BI dashboard. Add additional titles containing a text with your story/narrative and an image.
 
 ```{r}
 countdown(minutes = 20, warn_when = 60)
