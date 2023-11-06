@@ -42,12 +42,6 @@ opts_chunk$set(
 
 ```
 
-# Attendance QR Code
-
-[QR code](https://loop.dcu.ie/mod/attendance/password.php?session=78564)
-
----
-
 # Previously ...
 
 We have seen how important data visualisations are to convince an audience when included in a story/narrative.
@@ -526,11 +520,14 @@ include_graphics("https://rss.onlinelibrary.wiley.com/cms/asset/70b0be43-c955-49
 
 # Exercise: Titanic Dashboard
 
-## 1. Use **titanic.csv** to explore the following question: “women and children first” or “every man for himself”?
+## Use **titanic.csv** to create a Report containing:
+- **1 Composition Figure**: Pie chart of % passenger who survived/didn't survive
+- **1 Comparison Figure**: Bar chart of % passenger who survived/didn't survive according to Embarkation Location and Gender
+- **1 Relationship Figure**: Scatterplot with regression lines between Price of ticket, Age, and Gender 
 
-## 2. Create a report that contains **1 Composition Figure**, **1 Comparison Figure** and **1 Relationship Figure** and **pin them on a Power BI dashboard**.
+## Then, pin these 3 visualisation on a Power BI dashboard and add additional titles containing a text with your story/narrative and an image.
 
-## 3. Pin these 3 visualisation on a Power BI dashboard. Add additional titles containing a text with your story/narrative and an image.
+`r faa("exclamation-triangle", animate="flash", speed="slow", color="red")` The Survival variable will be recognised as continuous and not as categorical, you have to change its type.
 
 ```{r}
 countdown(minutes = 20, warn_when = 60)

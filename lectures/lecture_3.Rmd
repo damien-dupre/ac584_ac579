@@ -56,12 +56,6 @@ integer_breaks <- function(n = 5, ...) {
 organisation_alpha <- readxl::read_xlsx(here("data/organisation_alpha.xlsx"))
 ```
 
-# Attendance QR Code
-
-[QR code](https://loop.dcu.ie/mod/attendance/password.php?session=74763)
-
----
-
 # Previously ...
 
 ### After having:
