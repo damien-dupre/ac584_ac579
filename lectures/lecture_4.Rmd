@@ -518,14 +518,16 @@ include_graphics("https://rss.onlinelibrary.wiley.com/cms/asset/70b0be43-c955-49
 
 ---
 
-# Exercise: Titanic Dashboard
+class: title-slide, middle
 
-## Use **titanic.csv** to create a Report containing:
-- **1 Composition Figure**: Pie chart of % passenger who survived/didn't survive
-- **1 Comparison Figure**: Bar chart of % passenger who survived/didn't survive according to Embarkation Location and Gender
-- **1 Relationship Figure**: Scatterplot with regression lines between Price of ticket, Age, and Gender 
+## Use **titanic.csv** to create a Power BI Report
 
-## Then, pin these 3 visualisation on a Power BI dashboard and add additional titles containing a text with your story/narrative and an image.
+Design: 
+- **1 Pie Chart using Survival variable**
+- **1 Bar Chart Proportion using Survival, Sex and Embarked variables**
+- **1 Scatterplot using Fare, Age and Survival variables**
+
+Then, **pin these 3 visualisation on a Power BI dashboard** and to **add the text** from the document `text_dashboard.txt` to convey your narrative.
 
 `r faa("exclamation-triangle", animate="flash", speed="slow", color="red")` The Survival variable will be recognised as continuous and not as categorical, you have to change its type.
 

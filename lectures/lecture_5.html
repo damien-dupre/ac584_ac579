@@ -4,7 +4,7 @@
     <title>AC584/AC579 - Data Analytics for Accounting and Business</title>
     <meta charset="utf-8" />
     <meta name="author" content="Damien Dupré - Dublin City University" />
-    <script src="libs/header-attrs-2.21/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.25/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
@@ -206,7 +206,7 @@ Without being too complicated, there is two major ways to connect data in Tablea
 .pull-left[
 <span>&lt;i class="fas  fa-arrow-circle-right faa-horizontal animated faa-slow " style=" color:blue;"&gt;&lt;/i&gt;</span> More details about Tableau data connection possibilities with the following contents among others found online:
 
-- [Connecting to Data Sources by Tableau](https://help.tableau.com/current/guides/everybody-install/en-us/everybody_admin_data.htm)
+- [Connecting to Data Sources by Tableau](https://help.tableau.com/current/pro/desktop/en-us/data.htm)
 - [Tableau Data Connections to Databases and Multiple Sources9](https://www.guru99.com/tableau-data-connections.html)
 - [Types of Tableau Data Sources with Connection Establishment Process](https://data-flair.training/blogs/tableau-data-sources/)
 ]
@@ -214,7 +214,7 @@ Without being too complicated, there is two major ways to connect data in Tablea
 .pull-right[
 &lt;img src="img/bobross_connection.jpg" width="100%" style="display: block; margin: auto;" /&gt;
 
-.center[[Click here for more Bob Ross Tableau](https://public.tableau.com/profile/vizpainter#!/vizhome/TheJoyofVizPainting/TheJoyofVizPainting)]
+.center[[Click here for more Bob Ross Tableau](https://public.tableau.com/app/profile/vizpainter/viz/TheJoyofVizPainting/TheJoyofVizPainting)]
 ]
 
 ---
@@ -281,9 +281,9 @@ class: title-slide, middle
 
 ## Exercise
 
-From the loop page, on the tile "Lecture Data", use the files **organisation alpha details**, **organisation alpha salary 2017**, **organisation alpha salary 2018**, and **organisation alpha salary 2019** and join them in Tableau Public.
+From the loop page, on the tile "Lecture Data", use the files **organisation alpha details**, **organisation alpha salary 2020**, **organisation alpha salary 2021**, and **organisation alpha salary 2022** and join them in Tableau Public.
 
-<div class="countdown" id="timer_9a02d38e" data-warn-when="60" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_ffc06cbd" data-warn-when="60" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -629,16 +629,18 @@ Variables:
 ---
 class: title-slide, middle
 
-## From the loop page, use **titanic.csv** to create a Tableau Dashboard
+## Use **titanic.csv** to create a Tableau Dashbord
 
-Create: 
-- **1 Pie Chart using Survival**
-- **1 Bar Chart Proportion using Survival, Sex and Embarked**
-- **1 Scatterplot using Fare, Age and Survival**
+Design: 
+- **1 Pie Chart using Survival variable**
+- **1 Bar Chart Proportion using Survival, Sex and Embarked variables**
+- **1 Scatterplot using Fare, Age and Survival variables**
 
-Remember to **use titles**, to **customise them** and to **add a text** to convey your narrative
+Remember to **use titles**, to **customise the visualisations** and to **add the text** from the document `text_dashboard.txt` to convey your narrative.
 
-<div class="countdown" id="timer_82537a78" data-warn-when="60" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<span>&lt;i class="fas  fa-exclamation-triangle faa-flash animated faa-slow " style=" color:red;"&gt;&lt;/i&gt;</span> The Survival variable will be recognised as continuous and not as categorical, you have to change its type.
+
+<div class="countdown" id="timer_e0bc6de1" data-warn-when="60" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">20</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
