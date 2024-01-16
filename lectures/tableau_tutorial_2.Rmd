@@ -1,0 +1,163 @@
+---
+title: "AC584/AC579 - Data Analytics for Accounting and Business"
+subtitle: "Tableau Tutorial 2: Dashboard Design"
+author: "Damien Dupré - Dublin City University"
+output:
+  xaringan::moon_reader:
+    css: ["default", "metropolis", "metropolis-fonts", "css/custom_design.css"]
+    lib_dir: libs
+    nature:
+      beforeInit: "libs/cols_macro.js"
+      highlightStyle: zenburn
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+# libraries --------------------------------------------------------------------
+library(anicon)
+library(emo)
+library(tidyverse)
+library(knitr)
+
+# options ----------------------------------------------------------------------
+options(scipen = 999)
+opts_chunk$set(message = FALSE, warning = FALSE, echo = FALSE, fig.retina = 3, fig.align = "center")
+```
+
+# Previoulsy, We have seen...
+
+...how to create advanced visualisations like maps and times series charts.
+
+...how to customise visualisation with advanced features like alias, hoover tooltip, and interactive actions
+
+Today, we will see how to design a dashboard effectively.
+
+How to use screenspace?
+How to structure information?
+How to layout?
+How to apply interactivity?
+
+---
+
+# Design Strategy
+
+Creating an prefect Tableau dashboard is easy if you follow these steps:
+
+#### Step 1: Basic Figures
+
+Create many figures that can be used to support your story but leave them with all default parameters
+
+#### Step 2: Basic Dashboard
+
+Use the most relevant figures in a basic dashboard without taking care of its design but including all the relevant elements (title, text, pictures)
+
+#### Step 3: Figure Improvement
+
+Go back to the worksheet each figure included in the dashboard and customise them: Colour, size, shapes, title, captions, axes, and interactions
+
+#### Step 4: Dashboard Improvement
+
+Go back to the dashboard and customise it: Background, colours, fonts, layout and actions
+
+---
+
+class: inverse, mline, center, middle
+
+# 1. How to use screenspace?
+
+---
+
+# Quotes
+
+> “A visual display of the most important information needed to achieve one or more objectives; consolidated and arranged on a single screen so the information can be monitored at a glance.”
+
+Few, S., 2006. Information dashboard design: The effective visual communication of data (Vol. 2). Sebastopol, CA: O'reilly.
+
+> “A dashboard seeks to add as a translator, not simply a mirror, setting the forms and parameters for how data are communicated.”
+
+Kitchin, R., Lauriault, T.P. and McArdle, G., 2015. Knowing and governing cities through urban indicators, city benchmarking and real-time dashboards. Regional Studies, Regional Science, 2(1), pp.6-28.
+
+---
+
+# Dashboard Types
+
+```{r out.width='100%'}
+include_graphics("https://raw.githubusercontent.com/damien-dupre/img/main/dashboards/dashboard_types.png")
+```
+.center.tiny[Source: Dashboard Design Patterns [`r ji("link")`](https://dashboarddesignpatterns.github.io/)]
+
+---
+
+# Key Elements
+
+Every Dashboard should include the following key element to fill their screenspace:
+
+- A title
+- A written story
+- Multiple visualisations
+
+Optional elements can be added such as images, buttons, or menus
+
+```{r out.width='70%'}
+include_graphics("https://raw.githubusercontent.com/damien-dupre/img/main/dashboards/dashboard_key.png")
+```
+.center.tiny[Example of a dashboard structure. Not to necessary follow, for illustration only.]
+
+---
+
+# Key Elements: Title
+
+Let's have a look at examples from real dashboards [here](https://www.tableau.com/blog/tableau-public-viz-wrap-interesting-data-visualizations-2022)
+
+.pull-left[
+
+- A title should pinpoint the problem
+
+["Healthcare Crisis in Rural America"](https://public.tableau.com/app/profile/dennis.kao/viz/HealthcareCrisisinRuralAmericaProjectHealthViz/Dashboard1)
+
+
+
+- Affirmation or question
+
+["#CollegeGameday: Can My Family Out-Pick the Pundits?"](https://public.tableau.com/app/profile/sam.epley/viz/CollegeGamedayCanMyFamilyOut-PickthePundits/PickbyWeek)
+- Should be catchy
+
+]
+
+.pull-right[
+```{r out.width='100%'}
+include_graphics("https://raw.githubusercontent.com/damien-dupre/img/main/dashboards/dashboard_key_title.png")
+```
+]
+
+---
+
+# Design Guidelines
+
+1. Don’t overwhelm viewers
+2. Avoid visual clutter
+3. Avoid poor visual design
+4. Carefully chose KPIs
+5. Align with existing workflows
+6. Don’t add too much data
+7. Provide for consistency
+8. Provide for interaction affordances
+9. Manage complexity
+10. Organize charts symmetrically
+11. Group charts by attribute
+12. Order charts by time
+13. Balance data + space
+14. Increase information
+15. Avoid redundancy of information
+16. Show information, rather than data
+17. Design is an iterative process
+18. Context is very important
+19. State your meta data
+20. Use color carefully
+
+---
+
+# References
+
+- [Dashboard Design Patterns Workshop](https://dashboarddesignpatterns.github.io/docs/assets/Dashboard%20Design%20Workshop.pdf)

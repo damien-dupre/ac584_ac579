@@ -1,0 +1,27 @@
+---
+title: "AC584/AC579 - Data Analytics for Accounting and Business"
+subtitle: "Tableau Tutorial 1: Visualisation Design"
+author: "Damien Dupré - Dublin City University"
+output:
+  xaringan::moon_reader:
+    css: ["default", "metropolis", "metropolis-fonts", "css/custom_design.css"]
+    lib_dir: libs
+    nature:
+      beforeInit: "libs/cols_macro.js"
+      highlightStyle: zenburn
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+# libraries --------------------------------------------------------------------
+library(anicon)
+library(emo)
+library(tidyverse)
+library(knitr)
+
+# options ----------------------------------------------------------------------
+options(scipen = 999)
+opts_chunk$set(message = FALSE, warning = FALSE, echo = FALSE, fig.retina = 3, fig.align = "center")
+```
+
