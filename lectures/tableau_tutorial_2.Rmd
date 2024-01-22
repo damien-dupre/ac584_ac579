@@ -190,20 +190,20 @@ Uses each visualisation and extract the relevant information from them. Each inf
 
 Summarises the information and provides future recommendations/suggestions to the reader.
 
----
-class: title-slide, middle
+<!-- --- -->
+<!-- class: title-slide, middle -->
 
-## Exercise
+<!-- ## Exercise -->
 
-Access the following dashboard [here](https://public.tableau.com/app/profile/parthagarwal/viz/ParthAgarwal-Final/Dash) and identify the recommendations/suggestions resulting from the information shared.
+<!-- Access the following dashboard [here](https://public.tableau.com/app/profile/parthagarwal/viz/ParthAgarwal-Final/Dash) and identify the recommendations/suggestions resulting from the information shared. -->
 
-```{r out.width='100%'}
-include_graphics("https://raw.githubusercontent.com/damien-dupre/img/main/dashboards/dashboard_story_ex.png")
-```
+<!-- ```{r out.width='100%'} -->
+<!-- include_graphics("https://raw.githubusercontent.com/damien-dupre/img/main/dashboards/dashboard_story_ex.png") -->
+<!-- ``` -->
 
-```{r}
-countdown(minutes = 5, warn_when = 60)
-```
+<!-- ```{r} -->
+<!-- countdown(minutes = 5, warn_when = 60) -->
+<!-- ``` -->
 
 ---
 class: title-slide, middle
