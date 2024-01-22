@@ -16,12 +16,267 @@ output:
 ```{r setup, include=FALSE}
 # libraries --------------------------------------------------------------------
 library(anicon)
+library(countdown)
 library(emo)
+library(fontawesome)
+library(gapminder)
+library(here)
 library(tidyverse)
 library(knitr)
 
 # options ----------------------------------------------------------------------
 options(scipen = 999)
 opts_chunk$set(message = FALSE, warning = FALSE, echo = FALSE, fig.retina = 3, fig.align = "center")
+
+# data -------------------------------------------------------------------------
+data_left <- gapminder |>
+  select(country, year, pop) |>
+  write_csv(here("data/tutorial/data_left.csv"))
+
+data_right_1 <- gapminder |>
+  select(country, year, lifeExp) |>
+  write_csv(here("data/tutorial/data_right_1.csv"))
+
+data_right_2 <- gapminder |>
+  select(location = country, date = year, gdpPercap) |>
+  write_csv(here("data/tutorial/data_right_2.csv"))
+
+data_right_3 <- gapminder |>
+  select(country, continent) |>
+  distinct() |>
+  write_csv(here("data/tutorial/data_right_3.csv"))
 ```
 
+# Programme
+
+## Part 1: Joining Tables
+
+## Part 2: Map Visualisations
+
+## Part 3: Time Series Visualisations
+
+## Part 4: Scatter plots
+
+---
+
+# "Gapminder" Dataset
+
+In February 2006, a Swedish physician and data advocate named Hans Rosling gave a TED talk titled **“The best stats you’ve ever seen”** where he presented global economic, health, and development data from the website www.gapminder.org. For this tutorial, are going to use a dataset from this website.
+
+For each row, we have 6 columns:
+- **country**: Name of country.
+- **year**: Year of the observation (between 1952 and 2007).
+- **pop**: Number of people living in the country.
+- **continent**: Which of the five continents the country is part of. 
+- **lifeExp**: Life expectancy in years.
+- **gdpPercap**: Gross domestic product (in US dollars).
+
+```{r}
+kable(head(gapminder))
+```
+
+---
+
+class: inverse, mline, center, middle
+
+# Part 1: Joining Tables
+
+---
+
+# Joining Tables Exercises
+
+## On the module loop page, download the following files and have a look at them:
+- ## data_left.csv
+- ## data_right_1.csv
+- ## data_right_2.csv
+- ## data_right_3.csv
+
+---
+
+# Joining Tables Exercises
+
+## In tableau public...
+- ## join data_left.csv with data_right_1.csv
+
+```{r}
+countdown(minutes = 5, warn_when = 60)
+```
+
+--
+
+.pull-left[
+## data_left.csv
+```{r}
+head(gapminder) |> 
+  select(country, year, pop) |> 
+  kable()
+```
+]
+
+.pull-right[
+## data_right_1.csv
+```{r}
+head(gapminder) |> 
+  select(country, year, lifeExp) |> 
+  kable()
+```
+]
+
+---
+
+# Joining Tables Exercises
+
+## In tableau public...
+- ## join data_left.csv with data_right_2.csv
+
+```{r}
+countdown(minutes = 5, warn_when = 60)
+```
+
+--
+
+.pull-left[
+## data_left.csv
+```{r}
+head(gapminder) |> 
+  select(country, year, pop) |> 
+  kable()
+```
+]
+
+.pull-right[
+## data_right_2.csv
+```{r}
+head(gapminder) |> 
+  select(location = country, date = year, gdpPercap) |>
+  kable()
+```
+]
+
+---
+
+# Joining Tables Exercises
+
+## In tableau public...
+- ## join data_left.csv with data_right_3.csv
+
+```{r}
+countdown(minutes = 5, warn_when = 60)
+```
+
+--
+
+.pull-left[
+## data_left.csv
+```{r}
+head(gapminder) |> 
+  select(country, year, pop) |> 
+  kable()
+```
+]
+
+.pull-right[
+## data_right_3.csv
+```{r}
+gapminder |> 
+  select(country, continent) |> 
+  distinct() |> 
+  head() |> 
+  kable()
+```
+]
+
+---
+
+class: inverse, mline, center, middle
+
+# Part 2: Map Visualisations
+
+---
+
+# Map Visualisations Exercises
+
+## In tableau public...
+- ## Design a world map showing countries' life expectancy
+
+```{r}
+countdown(minutes = 5, warn_when = 60)
+```
+
+--
+
+- ## Design a world map showing countries' life expectancy in 1952
+
+```{r}
+countdown(minutes = 5, warn_when = 60)
+```
+
+--
+
+- ## Design a world map showing countries' population in 1952
+
+```{r}
+countdown(minutes = 5, warn_when = 60)
+```
+
+---
+
+class: inverse, mline, center, middle
+
+# Part 3: Time Series Visualisations
+
+---
+
+# Time Series Visualisations Exercises
+
+## In tableau public...
+- ## Design a time series visualisation showing the evolution of countries' life expectancy
+
+```{r}
+countdown(minutes = 5, warn_when = 60)
+```
+
+--
+
+- ## Design a time series visualisation showing the evolution of countries' population and add a filter by country
+
+```{r}
+countdown(minutes = 5, warn_when = 60)
+```
+
+---
+
+class: inverse, mline, center, middle
+
+# Part 4: Scatteroplots
+
+---
+
+# Scatteroplots Exercises
+
+## In tableau public...
+- ## Design a Scatteroplot with countries' life expectancy and gdpPercap
+
+```{r}
+countdown(minutes = 5, warn_when = 60)
+```
+
+--
+
+- ## Customise this scatterplot
+
+```{r}
+countdown(minutes = 5, warn_when = 60)
+```
+
+---
+class: inverse, mline, left, middle
+
+<img class="circle" src="https://github.com/damien-dupre.png" width="250px"/>
+
+# Thanks for your attention and don't hesitate to ask if you have any question!
+
+[`r fa(name = "twitter")` @damien_dupre](http://twitter.com/damien_dupre)  
+[`r fa(name = "github")` @damien-dupre](http://github.com/damien-dupre)  
+[`r fa(name = "link")` damien-datasci-blog.netlify.app](https://damien-datasci-blog.netlify.app)  
+[`r fa(name = "paper-plane")` damien.dupre@dcu.ie](mailto:damien.dupre@dcu.ie)
