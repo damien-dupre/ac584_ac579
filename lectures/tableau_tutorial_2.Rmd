@@ -16,7 +16,9 @@ output:
 ```{r setup, include=FALSE}
 # libraries --------------------------------------------------------------------
 library(anicon)
+library(countdown)
 library(emo)
+library(fontawesome)
 library(tidyverse)
 library(knitr)
 
@@ -25,18 +27,15 @@ options(scipen = 999)
 opts_chunk$set(message = FALSE, warning = FALSE, echo = FALSE, fig.retina = 3, fig.align = "center")
 ```
 
-# Previoulsy, We have seen...
+# Programme
 
-...how to create advanced visualisations like maps and times series charts.
+## How to use screenspace?
 
-...how to customise visualisation with advanced features like alias, hoover tooltip, and interactive actions
+## How to structure information?
 
-Today, we will see how to design a dashboard effectively.
+## How to layout?
 
-How to use screenspace?
-How to structure information?
-How to layout?
-How to apply interactivity?
+## How to apply interactivity?
 
 ---
 
@@ -62,21 +61,39 @@ Go back to the dashboard and customise it: Background, colours, fonts, layout an
 
 ---
 
+# Overall Design Guidelines
+
+1. Don’t overwhelm viewers
+2. Avoid visual clutter
+3. Avoid poor visual design
+4. Don’t add too much data
+5. Provide for consistency
+6. Provide for interaction affordances
+7. Manage complexity
+9. Organize charts
+10. Increase information
+11. Avoid redundancy of information
+12. Design is an iterative process
+13. Context is very important
+14. Use color carefully
+
+---
+
 class: inverse, mline, center, middle
 
 # 1. How to use screenspace?
 
----
+<!-- --- -->
 
-# Quotes
+<!-- # Quotes -->
 
-> “A visual display of the most important information needed to achieve one or more objectives; consolidated and arranged on a single screen so the information can be monitored at a glance.”
+<!-- > “A visual display of the most important information needed to achieve one or more objectives; consolidated and arranged on a single screen so the information can be monitored at a glance.” -->
 
-Few, S., 2006. Information dashboard design: The effective visual communication of data (Vol. 2). Sebastopol, CA: O'reilly.
+<!-- Few, S., 2006. Information dashboard design: The effective visual communication of data (Vol. 2). Sebastopol, CA: O'reilly. -->
 
-> “A dashboard seeks to add as a translator, not simply a mirror, setting the forms and parameters for how data are communicated.”
+<!-- > “A dashboard seeks to add as a translator, not simply a mirror, setting the forms and parameters for how data are communicated.” -->
 
-Kitchin, R., Lauriault, T.P. and McArdle, G., 2015. Knowing and governing cities through urban indicators, city benchmarking and real-time dashboards. Regional Studies, Regional Science, 2(1), pp.6-28.
+<!-- Kitchin, R., Lauriault, T.P. and McArdle, G., 2015. Knowing and governing cities through urban indicators, city benchmarking and real-time dashboards. Regional Studies, Regional Science, 2(1), pp.6-28. -->
 
 ---
 
@@ -87,6 +104,8 @@ include_graphics("https://raw.githubusercontent.com/damien-dupre/img/main/dashbo
 ```
 .center.tiny[Source: Dashboard Design Patterns [`r ji("link")`](https://dashboarddesignpatterns.github.io/)]
 
+- [See Dashboard Design Patterns Workshop for more details](https://dashboarddesignpatterns.github.io/docs/assets/Dashboard%20Design%20Workshop.pdf)
+
 ---
 
 # Key Elements
@@ -94,7 +113,7 @@ include_graphics("https://raw.githubusercontent.com/damien-dupre/img/main/dashbo
 Every Dashboard should include the following key element to fill their screenspace:
 
 - A title
-- A written story
+- A written story including Introduction, Analysis, and Conclusion
 - Multiple visualisations
 
 Optional elements can be added such as images, buttons, or menus
@@ -116,12 +135,13 @@ Let's have a look at examples from real dashboards [here](https://www.tableau.co
 
 ["Healthcare Crisis in Rural America"](https://public.tableau.com/app/profile/dennis.kao/viz/HealthcareCrisisinRuralAmericaProjectHealthViz/Dashboard1)
 
-
-
 - Affirmation or question
 
 ["#CollegeGameday: Can My Family Out-Pick the Pundits?"](https://public.tableau.com/app/profile/sam.epley/viz/CollegeGamedayCanMyFamilyOut-PickthePundits/PickbyWeek)
+
 - Should be catchy
+
+["NBA Lords of the Rings"](https://public.tableau.com/app/profile/jeff.plattner4532/viz/NBALordsoftheRings/LordsoftheRings)
 
 ]
 
@@ -132,32 +152,115 @@ include_graphics("https://raw.githubusercontent.com/damien-dupre/img/main/dashbo
 ]
 
 ---
+class: title-slide, middle
 
-# Design Guidelines
+## Exercise
 
-1. Don’t overwhelm viewers
-2. Avoid visual clutter
-3. Avoid poor visual design
-4. Carefully chose KPIs
-5. Align with existing workflows
-6. Don’t add too much data
-7. Provide for consistency
-8. Provide for interaction affordances
-9. Manage complexity
-10. Organize charts symmetrically
-11. Group charts by attribute
-12. Order charts by time
-13. Balance data + space
-14. Increase information
-15. Avoid redundancy of information
-16. Show information, rather than data
-17. Design is an iterative process
-18. Context is very important
-19. State your meta data
-20. Use color carefully
+Find a title for your Gapminder dashboard
+
+```{r}
+countdown(minutes = 5, warn_when = 60)
+```
 
 ---
 
-# References
+# Key Elements: Story
 
-- [Dashboard Design Patterns Workshop](https://dashboarddesignpatterns.github.io/docs/assets/Dashboard%20Design%20Workshop.pdf)
+.pull-left[
+
+The story (narrative conveying the information) is structure around 3 parts: Introduction, Analysis, and Conclusion.
+
+### Introdcution
+
+Presents the context regarding the issue investigated
+
+]
+
+.pull-right[
+```{r out.width='100%'}
+include_graphics("https://raw.githubusercontent.com/damien-dupre/img/main/dashboards/dashboard_key_story.png")
+```
+]
+
+### Analysis
+
+Uses each visualisation and extract the relevant information from them. Each information should be linked is some ways (e.g. temporal, complexity, geographical, logical, discursive, ...).
+
+### Conclusion
+
+Summarises the information and provides future recommendations/suggestions to the reader.
+
+---
+class: title-slide, middle
+
+## Exercise
+
+Access the following dashboard [here](https://public.tableau.com/app/profile/parthagarwal/viz/ParthAgarwal-Final/Dash) and identify the recommendations/suggestions resulting from the information shared.
+
+```{r out.width='100%'}
+include_graphics("https://raw.githubusercontent.com/damien-dupre/img/main/dashboards/dashboard_story_ex.png")
+```
+
+```{r}
+countdown(minutes = 5, warn_when = 60)
+```
+
+---
+class: title-slide, middle
+
+## Exercise
+
+Using Chat GPT, write a story for your Gapminder dashboard
+
+```{r}
+countdown(minutes = 5, warn_when = 60)
+```
+
+---
+
+# Key Elements: Visualisations
+
+.pull-left[
+
+1. Place your visualisations in a relevant order 
+2. Make sure they are customised
+3. Add a caption
+4. Add global interactive features
+
+]
+
+.pull-right[
+```{r out.width='100%'}
+include_graphics("https://raw.githubusercontent.com/damien-dupre/img/main/dashboards/dashboard_key_viz.png")
+```
+]
+
+---
+class: title-slide, middle
+
+## Exercise
+
+1. Insert some of your Gapminder visualisations (max 5) on a dashboard
+2. Add your story and title
+3. Configure global Filter and Highlight actions from the tab **Dashboard** and option **"Actions..."**
+4. Modify the hover tooltip
+
+```{r out.width='100%'}
+include_graphics("https://raw.githubusercontent.com/damien-dupre/img/main/tableau/tableau_public_actions.png")
+```
+
+```{r}
+countdown(minutes = 15, warn_when = 60)
+```
+
+---
+class: inverse, mline, left, middle
+
+<img class="circle" src="https://github.com/damien-dupre.png" width="250px"/>
+
+# Thanks for your attention and don't hesitate to ask if you have any question!
+
+[`r fa(name = "twitter")` @damien_dupre](http://twitter.com/damien_dupre)  
+[`r fa(name = "github")` @damien-dupre](http://github.com/damien-dupre)  
+[`r fa(name = "link")` damien-datasci-blog.netlify.app](https://damien-datasci-blog.netlify.app)  
+[`r fa(name = "paper-plane")` damien.dupre@dcu.ie](mailto:damien.dupre@dcu.ie)
