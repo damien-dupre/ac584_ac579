@@ -29,6 +29,9 @@ options(scipen = 999)
 opts_chunk$set(message = FALSE, warning = FALSE, echo = FALSE, fig.retina = 3, fig.align = "center")
 
 # data -------------------------------------------------------------------------
+data_full <- gapminder |>
+  write_csv(here("data/tutorial/data_full.csv"))
+
 data_left <- gapminder |>
   select(country, year, pop) |>
   write_csv(here("data/tutorial/data_left.csv"))
@@ -248,14 +251,14 @@ countdown(minutes = 5, warn_when = 60)
 
 class: inverse, mline, center, middle
 
-# Part 4: Scatteroplots
+# Part 4: Scatterplots
 
 ---
 
-# Scatteroplots Exercises
+# Scatterplots Exercises
 
 ## In tableau public...
-- ## Design a Scatteroplot with countries' life expectancy and gdpPercap
+- ## Design a Scatterplot with countries' life expectancy and gdpPercap
 
 ```{r}
 countdown(minutes = 5, warn_when = 60)

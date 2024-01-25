@@ -245,7 +245,7 @@ class: title-slide, middle
 3. Configure global Filter and Highlight actions from the tab **Dashboard** and option **"Actions..."**
 4. Modify the hover tooltip
 
-```{r out.width='100%'}
+```{r out.width='60%'}
 include_graphics("https://raw.githubusercontent.com/damien-dupre/img/main/tableau/tableau_public_actions.png")
 ```
 
