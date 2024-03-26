@@ -1,4 +1,5 @@
 ---
+title: "Quarto Tutorial"
 output:
   xaringan::moon_reader:
     seal: false
@@ -207,7 +208,7 @@ data_left <- read_csv("data_left.csv")
 data_right_2 <- read_csv("data_right_2.csv")
 
 data_join_2 <- 
-  full_join(data_left, data_right_2, by = join_by(country == location, year == date))
+  full_join(data_left, data_right_2, by = c("country" = "location", "year" = "date"))
 ```
 
 Note:
@@ -260,7 +261,18 @@ data_right_3 <- read_csv("data_right_3.csv")
 
 data_join_3 <- full_join(data_left, data_right_3)
 # or
-data_join_3 <- full_join(data_left, data_right_3, by = join_by(country))
+data_join_3 <- full_join(data_left, data_right_3, by = c("country"))
+```
+
+---
+
+# Joining Tables Exercises
+
+```{r echo=TRUE}
+data_join <- data_left %>%
+  full_join(data_right_1) %>%
+  full_join(data_right_2, by = c("country" = "location", "year" = "date")) %>%
+  full_join(data_right_3)
 ```
 
 ---
@@ -287,9 +299,9 @@ countdown(minutes = 5, warn_when = 60)
 ```{r echo=TRUE, fig.height=4}
 map_world <- map_data("world") 
 
-map_gapminder <- full_join(gapminder, map_world, by = c("country" = "region"))
+map_data_join <- full_join(data_join, map_world, by = c("country" = "region"))
 
-ggplot(map_gapminder) +
+ggplot(map_data_join) +
   aes(x = long, y = lat, group = group, fill = lifeExp) +
   geom_polygon()
 ```
@@ -314,12 +326,12 @@ countdown(minutes = 5, warn_when = 60)
 ```{r echo=TRUE, fig.height=4}
 map_world <- map_data("world") 
 
-gap_1952 <- gapminder %>% 
+data_join_1952 <- data_join %>% 
   filter(year == 1952)
 
-map_gap_1952 <- full_join(gap_1952, map_world, by = c("country" = "region"))
+map_data_join_1952 <- full_join(data_join_1952, map_world, by = c("country" = "region"))
 
-ggplot(map_gap_1952) +
+ggplot(map_data_join_1952) +
   aes(x = long, y = lat, group = group, fill = lifeExp) +
   geom_polygon()
 ```
@@ -342,7 +354,7 @@ countdown(minutes = 5, warn_when = 60)
 ```{r echo=TRUE, fig.height=4}
 map_world <- map_data("world") 
 
-gapminder %>% 
+data_join %>% 
   filter(year == 1952) %>% 
   full_join(map_world, by = c("country" = "region")) %>% 
   ggplot(aes(x = long, y = lat, group = group, fill = pop)) +
@@ -371,7 +383,7 @@ countdown(minutes = 5, warn_when = 60)
 # Time Series Visualisations Exercises
 
 ```{r echo=TRUE, fig.height=5}
-ggplot(gapminder) +
+ggplot(data_join) +
   aes(year, lifeExp, group = country, color = continent) +
   geom_line()
 ```
@@ -394,7 +406,7 @@ countdown(minutes = 5, warn_when = 60)
 ```{r echo=TRUE, fig.height=5}
 library(plotly)
 
-timeseries_plot <- ggplot(gapminder) +
+timeseries_plot <- ggplot(data_join) +
   aes(year, lifeExp, group = country, color = continent) +
   geom_line()
 
@@ -422,7 +434,7 @@ countdown(minutes = 5, warn_when = 60)
 # Scatterplots Exercises
 
 ```{r echo=TRUE, fig.width=12, fig.height=2}
-ggplot(gapminder) +
+ggplot(data_join) +
   aes(gdpPercap, lifeExp, color = continent, size = pop) +
   geom_point(alpha = 0.2) +
   facet_wrap(~ year, nrow = 1) +
@@ -462,7 +474,7 @@ countdown(minutes = 5, warn_when = 60)
 # Bar Chart Exercises
 
 ```{r echo=TRUE, fig.width=12, fig.height=2}
-gapminder %>%
+data_join %>%
   group_by(continent, year) %>%
   summarise(m_lifeexp = mean(lifeExp, na.rm = TRUE)) %>%
   ggplot(aes(reorder(continent, m_lifeexp), m_lifeexp, fill = continent)) +
@@ -548,7 +560,7 @@ Modify the YAML to include:
 title: "My First Quarto Document"
 subtitle: "My Subtitle"
 author: "Damien Dupre"
-date: "99/99/9999"
+date: "2024-03-27"
 format:
   html: 
     theme: sandstone
@@ -578,8 +590,14 @@ library(tidyverse)
 # data
 data_left <- read_csv("data_left.csv")
 data_right_1 <- read_csv("data_right_1.csv")
+data_right_2 <- read_csv("data_right_2.csv")
+data_right_3 <- read_csv("data_right_3.csv")
 
-data_join_1 <- full_join(data_left, data_right_1)
+# transformations
+data_join <- data_left %>%
+  full_join(data_right_1) %>%
+  full_join(data_right_2, by = c("country" = "location", "year" = "date")) %>%
+  full_join(data_right_3)
 ``````
 
 `r faa("exclamation-triangle", animate="flash", speed="slow", color="red")` Don't forget:
@@ -607,12 +625,12 @@ data_join_1 <- full_join(data_left, data_right_1)
 
 map_world <- map_data("world") 
 
-gap_1952 <- gapminder %>% 
+data_join_1952 <- data_join %>% 
   filter(year == 1952)
 
-map_gap_1952 <- full_join(gap_1952, map_world, by = c("country" = "region"))
+map_data_join_1952 <- full_join(data_join_1952, map_world, by = c("country" = "region"))
 
-ggplot(map_gap_1952) +
+ggplot(map_data_join_1952) +
   aes(x = long, y = lat, group = group, fill = lifeExp) +
   geom_polygon()
 ``````
